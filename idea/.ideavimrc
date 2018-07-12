@@ -1,0 +1,94 @@
+let mapleader='\'
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmode
+set number
+set relativenumber
+set scrolloff=3
+set history=100000
+" set clipboard=unnamed
+" 如果:map不需要递归映射的话，建议试用:noremap "
+" inoremap <C-b> <C-h>
+
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+vnoremap <Leader>y "+y
+vnoremap <Leader>d "+d
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
+
+nnoremap <leader>l :nohlsearch<cr>
+
+ inoremap <C-a> <Home>
+ inoremap <C-e> <End>
+ inoremap <C-d> <Delete>
+ inoremap <C-b> <Backspace>
+
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>r :action Find<CR>
+" nnoremap <Leader>// :action CommentByLineComment<CR>
+nnoremap <Leader>cc :action CommentByLineComment<CR>
+nnoremap <Leader>cu :action CommentByLineComment<CR>
+vmap <Leader>cc :action CommentByLineComment<CR>
+vmap <Leader>cu :action CommentByLineComment<CR>
+
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>bl :action ViewBreakpoints<CR>
+
+nnoremap <Leader>cv :action ChangeView<CR>
+
+nnoremap <Leader>cd :action ChooseDebugConfiguration<CR>
+
+nnoremap <Leader>ga :action GotoAction<CR>
+nnoremap <Leader>gc :action GotoClass<CR>
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gs :action GotoSuperMethod<CR>
+nnoremap <Leader>gt :action GotoTest<CR>
+
+nnoremap <Leader>fp :action ShowFilePath<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
+nnoremap <Leader>fs :action FileStructurePopup<CR>
+nnoremap <Leader>fc :action ReformatCode<CR>
+
+nnoremap <Leader>ic :action InspectCode<CR>
+
+nnoremap <Leader>mv :action ActivateMavenProjectsToolWindow<CR>
+
+nnoremap <Leader>oi :action OptimizeImports<CR>
+
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
+
+nnoremap <Leader>rc :action ChooseRunConfiguration<CR>
+nnoremap <Leader>rn :action RenameElement<CR>
+nnoremap <Leader>rf :action RenameFile<CR>:
+
+nnoremap <Leader>se :action SearchEverywhere<CR>
+nnoremap <Leader>su :action ShowUsages<CR>
+
+nnoremap <Leader>tc  :action CloseActiveTab<CR>
+nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
+
+vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
+" setting
+nnoremap <Leader>se :e ~\.ideavimrc<CR>
+nnoremap <Leader>ss :source ~\.ideavimrc<CR>
+
+" nnoremap <Leader>cc :
+
+" set surround
+" map ,y "+y
+" map ,p "+p
+" inoremap <C-n> <C-o>:action CodeCompletion<CR>
+" inoremap <C-p> <C-o>:action CodeCompletion<CR>
+nnoremap <C-p> :action SearchEverywhere<CR>
+vnoremap <C-p> :action SearchEverywhere<CR>
+inoremap <C-p> :action SearchEverywhere<CR>
