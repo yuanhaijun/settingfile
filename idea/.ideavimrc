@@ -10,7 +10,6 @@ set relativenumber
 set scrolloff=3
 set history=100000
 " set clipboard=unnamed
-" 如果:map不需要递归映射的话，建议试用:noremap "
 " inoremap <C-b> <C-h>
 
 inoremap <C-h> <Left>
@@ -24,6 +23,12 @@ nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
+
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
+
 
 nnoremap <leader>l :nohlsearch<cr>
 
@@ -79,10 +84,9 @@ nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 " setting
-nnoremap <Leader>se :e ~\.ideavimrc<CR>
+nnoremap <Leader>es :e ~\.ideavimrc<CR>
 nnoremap <Leader>ss :source ~\.ideavimrc<CR>
 
-" nnoremap <Leader>cc :
 
 " set surround
 " map ,y "+y
@@ -92,3 +96,8 @@ nnoremap <Leader>ss :source ~\.ideavimrc<CR>
 nnoremap <C-p> :action SearchEverywhere<CR>
 vnoremap <C-p> :action SearchEverywhere<CR>
 inoremap <C-p> :action SearchEverywhere<CR>
+
+nnoremap g; :<C-u>action JumpToLastChange<CR>
+nnoremap g, :<C-u>action JumpToNextChange<CR>
+nnoremap [e :<C-u>action GotoPreviousError<CR>
+nnoremap ]e :<C-u>action GotoNextError<CR>
