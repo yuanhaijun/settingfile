@@ -9,6 +9,7 @@ set number
 set relativenumber
 set scrolloff=3
 set history=100000
+
 " set clipboard=unnamed
 " inoremap <C-b> <C-h>
 
